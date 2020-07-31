@@ -4,8 +4,8 @@ synthesis_input = {
   text: 'にっこにっこにー',
 }
 voice = {
-  language_code: 'en-US',
-  ssml_gender: 'NEUTRAL',
+  language_code: 'ja-JP',
+  ssml_gender: 'FEMALE',
 }
 audio_config = {
   audio_encoding: 'MP3',
@@ -21,5 +21,3 @@ response = Google::Cloud::TextToSpeech
 File.open 'output.mp3', 'wb' do |file|
   file.write response.audio_content
 end
-
-puts "Audio content written to file 'output.mp3'"
